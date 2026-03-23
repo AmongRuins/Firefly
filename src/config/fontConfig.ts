@@ -5,7 +5,7 @@ export const fontConfig = {
 	// 是否预加载字体文件
 	preload: true,
 	// 当前选择的字体，支持多个字体组合
-	selected: ["misans-regular"],
+	selected: ["loli"],
 
 	// 字体列表
 	// 推荐使用可靠的 CDN 服务商提供的字体链接，它天然做了按需分片加载，且性能较好
@@ -66,6 +66,26 @@ export const fontConfig = {
 			name: "MiSans Semibold",
 			src: "https://unpkg.com/misans@4.1.0/lib/Normal/MiSans-Semibold.min.css",
 			family: "MiSans",
+			weight: 600,
+			display: "swap" as const,
+		},
+		
+		// 萝莉字体 - MiSans Semibold
+		"loli": {
+			id: "loli",
+			name: "萝莉 第二版",
+			src: "/assets/font/loli.ttf",
+			family: "loli",
+			weight: 500,
+			display: "swap" as const,
+		},
+		
+		// 萝莉字体 - MiSans Semibold
+		"ZenMaruGothic": {
+			id: "ZenMaruGothic",
+			name: "ZenMaruGothic",
+			src: "/assets/font/ZenMaruGothic-Medium.ttf",
+			family: "ZenMaruGothic-Medium",
 			weight: 600,
 			display: "swap" as const,
 		},
