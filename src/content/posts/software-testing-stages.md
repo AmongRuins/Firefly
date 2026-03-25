@@ -3,8 +3,8 @@ title: 软件测试阶段
 published: 2026-03-24
 description: ''
 image: ''
-tags: []
-category: ''
+tags: [阶段]
+category: '软件测试'
 draft: false 
 lang: ''
 ---
