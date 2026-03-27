@@ -1,8 +1,8 @@
 ---
 title: Giscus评论系统
 published: 2026-03-09T18:25:28
-description: 'iscus就是这样一个很好的评论区，它基于Github Discussion，无需自托管，无需你管理账号，仅需引入一个JS即可用！'
-image: 'https://list.yppp.net/d/image/e71147260b22b1dd1e3f1eb0174659ce.png'
+description: 'giscus就是这样一个很好的评论区，它基于Github Discussion，无需自托管，无需你管理账号，仅需引入一个JS即可用！'
+image: './images/covers/giscus.webp'
 tags: [Giscus,评论]
 category: 博客
 draft: false 

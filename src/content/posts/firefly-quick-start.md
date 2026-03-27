@@ -3,7 +3,7 @@ title: Firefly 快速开始
 published: 2026-03-23
 description: '快速配置且部署 Firefly'
 pinned: true
-image: './firefly-quick-start/firefly.webp'
+image: './images/covers/firefly.webp'
 tags: [Firefly主题]
 category: '博客'
 draft: false 

@@ -1,12 +1,18 @@
 ---
-title: Firefly 文章简述
+title: 文章简述
 published: 2026-03-22
-description: "关于 Firefly 文章的一些说明"
-image: "./images/guide/2025-12-e76b8f9cb29ab2fdc1ea79fc16ac7893.webp"
+description: "关于文章的一些说明"
+image: "./images/covers/summary.webp"
 tags: ["Firefly主题"]
 category: 博客
 draft: false
 ---
+
+## 创建一篇文章
+
+```bash
+pnpm new-post "import-to-zentao"
+```
 
 ## 文章的 Front-matter
 
