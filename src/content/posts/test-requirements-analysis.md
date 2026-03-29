@@ -2,7 +2,7 @@
 title: 软件测试工作流程 - 需求分析阶段
 published: 2026-03-28
 description: '介绍软件测试工作流程第一阶段需求分析'
-image: ''
+image: './images/covers/analysis.webp'
 tags: [软件测试工作流程]
 category: '软件测试'
 draft: false 
@@ -49,3 +49,7 @@ lang: ''
 对于`字段约束`，例如`同时包含中文、英文`这样，没有必要写`纯中文、纯英文`这样的需求项，直接`不同时包含中文、英文`即可。
 
 编写测试用例前需要进行测试需求分析，而不是需求分析和测试用例`二选一`。
+
+## 控件测试要点
+
+可以在该笔记 [控件测试要点](https://wwbri.lanzoub.com/iOSDV3lvxx4b) 中找到对应控件的测试要点。
