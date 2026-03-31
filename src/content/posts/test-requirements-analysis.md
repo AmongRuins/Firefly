@@ -46,6 +46,8 @@ lang: ''
     通过 Xmind 编写需求分析得出：
     ![](./images/test-requirements-analysis/analysishomework2answer.webp)
 
+登录注册文件描述：[测试需求](https://wwbri.lanzoub.com/ioSn33m058xc)
+
 对于`字段约束`，例如`同时包含中文、英文`这样，没有必要写`纯中文、纯英文`这样的需求项，直接`不同时包含中文、英文`即可。
 
 编写测试用例前需要进行测试需求分析，而不是需求分析和测试用例`二选一`。

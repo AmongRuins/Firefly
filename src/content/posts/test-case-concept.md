@@ -2,7 +2,7 @@
 title: 测试用例概念
 published: 2026-03-30
 description: '介绍测试用例的定义以及模板构成'
-image: ''
+image: './images/covers/testcase.webp'
 tags: [测试用例]
 category: '软件测试'
 draft: false 
