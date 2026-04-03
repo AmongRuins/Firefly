@@ -1,10 +1,10 @@
 ---
 title: Bug相关概念
 published: 2026-04-02
-description: ''
-image: ''
-tags: []
-category: ''
+description: '软件开始所遗留的Bug，通过测试发现'
+image: './images/covers/bug.webp'
+tags: [Bug]
+category: '软件测试'
 draft: false 
 lang: ''
 ---
