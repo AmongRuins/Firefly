@@ -1,10 +1,10 @@
 ---
 title: 数据库表操作
 published: 2026-04-08
-description: ''
+description: '针对数据库与表的操作，即数据定义语言'
 image: ''
-tags: []
-category: ''
+tags: [MySQL]
+category: '软件测试'
 draft: false 
 lang: ''
 ---
@@ -111,15 +111,82 @@ SOURCE /path/to/test_db_backup.sql;
 
 ## 表操作
 
-创建数据库，并为每列指定`类型`
+操作表前必须`先指定数据库`，执行 `USE 数据库名;`，或通过 `库名.表名` 方式指定归属库。
+
+### 表的创建（CREATE TABLE）
+
+核心作用：定义表结构、字段类型、约束规则、存储属性，是表操作的基础。
 ```sql
--- user表结构
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` INT PRIMARY KEY AUTO_INCREMENT COMMENT '主键ID',
-  `name` VARCHAR(50) NOT NULL COMMENT '用户名',
-  `age` TINYINT DEFAULT 0 COMMENT '年龄',
-  `gender` CHAR(2) COMMENT '性别',
-  `email` VARCHAR(100) UNIQUE COMMENT '邮箱',
-  `create_time` DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户表';
+CREATE TABLE [IF NOT EXISTS] 表名 (
+    字段名1 数据类型 [字段约束] [COMMENT '字段注释'],
+    字段名2 数据类型 [字段约束] [COMMENT '字段注释'],
+    ...
+    [表级约束]
+) [ENGINE=存储引擎] [DEFAULT CHARSET=字符集] [COLLATE=校验规则] [COMMENT='表注释'];
 ```
+
+### 修改表
+
+核心作用：修改表的字段、约束、属性，大表修改需在业务低峰期执行，避免锁表影响业务。
+
+| **操作场景**        | **SQL 语句**                                                                                                                            | **注意事项**                            |
+|-----------------|---------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
+| **新增字段**        | ALTER TABLE user ADD COLUMN address VARCHAR(200) NOT NULL DEFAULT '' COMMENT '地址' AFTER email;                                        | AFTER 指定字段位置，FIRST 放在首位；不指定默认追加到表末尾 |
+| **批量新增字段**      | ALTER TABLE user ADD COLUMN province VARCHAR(50) COMMENT '省份' AFTER address, ADD COLUMN city VARCHAR(50) COMMENT '城市' AFTER province; | 一次修改完成，避免多次 ALTER 大表                |
+| **修改字段类型 / 约束** | ALTER TABLE user MODIFY COLUMN address VARCHAR(300) DEFAULT '' COMMENT '详细地址';                                                        | 仅修改属性，不能重命名字段；修改类型需兼容原有数据，避免数据截断    |
+| **重命名字段**       | ALTER TABLE user RENAME COLUMN address TO full_address;                                                                               | MySQL 8.0+ 支持；5.7 版本需用 CHANGE 语法    |
+| **5.7 兼容重命名字段** | ALTER TABLE user CHANGE COLUMN address full_address VARCHAR(300) DEFAULT '' COMMENT '详细地址';                                           | CHANGE 必须重写完整的字段类型和属性               |
+| **删除字段**        | ALTER TABLE user DROP COLUMN full_address;                                                                                            | 高危操作，删除后数据不可恢复，执行前必须备份  
+
+### 表属性全局修改
+
+```sql
+-- 1. 重命名表（两种写法）
+-- 写法1：推荐，原子操作
+ALTER TABLE user RENAME TO user_info;
+-- 写法2：兼容旧版本
+RENAME TABLE user TO user_info;
+
+-- 2. 修改表的存储引擎（大表慎用，会锁表全表重建）
+ALTER TABLE user ENGINE=InnoDB;
+
+-- 3. 修改表的字符集与校验规则（同步修改字段字符集）
+ALTER TABLE user CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+
+-- 4. 修改表注释
+ALTER TABLE user COMMENT='用户基础信息表';
+
+-- 5. 修改自增主键的起始值（只能往大调，不能小于当前最大id）
+ALTER TABLE user AUTO_INCREMENT=1000;
+```
+
+```sql
+-- 1. 重命名表（两种写法）
+-- 写法1：推荐，原子操作
+ALTER TABLE user RENAME TO user_info;
+-- 写法2：兼容旧版本
+RENAME TABLE user TO user_info;
+
+-- 2. 修改表的存储引擎（大表慎用，会锁表全表重建）
+ALTER TABLE user ENGINE=InnoDB;
+
+-- 3. 修改表的字符集与校验规则（同步修改字段字符集）
+ALTER TABLE user CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+
+-- 4. 修改表注释
+ALTER TABLE user COMMENT='用户基础信息表';
+
+-- 5. 修改自增主键的起始值（只能往大调，不能小于当前最大id）
+ALTER TABLE user AUTO_INCREMENT=1000;
+```
+
+### 表的删除与清空
+
+| **特性**   | **DROP TABLE**      | **TRUNCATE TABLE** | **DELETE FROM 表名**       |
+|----------|---------------------|--------------------|--------------------------|
+| **操作类型** | DDL（数据定义语言）         | DDL                | DML（数据操纵语言）              |
+| **执行效果** | 删除整个表（结构 + 数据 + 索引） | 清空全表数据，保留结构        | 按条件删除数据，无 WHERE 则清空全表    |
+| **事务回滚** | 不可回滚                | 不可回滚               | 可回滚（需开启事务）               |
+| **自增主键** | 彻底删除                | 重置为初始值             | 不重置，继续递增                 |
+| **执行速度** | 极快                  | 极快（大数据量远优于 DELETE） | 逐行删除，大数据量极慢              |
+| **锁机制**  | 元数据锁                | 元数据锁               | 行锁（InnoDB），无 WHERE 会触发表锁 |
