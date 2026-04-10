@@ -2,7 +2,7 @@
 title: 数据库数据类型
 published: 2026-04-09
 description: '创建表时字段所设置的数据类型'
-image: ''
+image: './images/covers/datetype.jpg'
 tags: [MySQL]
 category: '软件测试'
 draft: false 

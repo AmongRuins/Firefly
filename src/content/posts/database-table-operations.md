@@ -2,7 +2,7 @@
 title: 数据库表操作
 published: 2026-04-08
 description: '针对数据库与表的操作，即数据定义语言'
-image: ''
+image: './images/covers/operation.webp'
 tags: [MySQL]
 category: '软件测试'
 draft: false 
@@ -34,8 +34,8 @@ mysql -u root -p
 # 远程连接（指定主机、端口）
 mysql -h 192.168.1.100 -P 3306 -u root -p
 
-# 连接时指定数据库
-mysql -u root -p test_db
+# 免安装时使用，启动MySQL服务
+net start mysql
 ```
 
 基础配置查看

@@ -2,7 +2,7 @@
 title: 金融项目实战(一)
 published: 2026-04-05
 description: '软件测试基本理论金融项目实战'
-image: ''
+image: './images/covers/project-practice.jpg'
 tags: [项目实战]
 category: '软件测试'
 draft: false 
