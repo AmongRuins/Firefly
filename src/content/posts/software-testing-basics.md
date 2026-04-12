@@ -2,7 +2,7 @@
 title: 软件与软件测试的定义与分类
 published: 2026-03-27
 description: '讲解软件的定义及软件测试分类'
-image: './images/covers/concepts.webp'
+image: './images/covers/software-testing-basics.webp'
 tags: [软件测试,软件]
 category: '功能测试'
 draft: false 
