@@ -3,8 +3,8 @@ title: Linux相关命令
 published: 2026-04-04
 description: '一些Linux常见命令'
 image: './images/covers/linux.webp'
-tags: [Linux]
-category: '软件测试'
+tags: [软件测试]
+category: 'Linux'
 draft: false 
 lang: ''
 ---

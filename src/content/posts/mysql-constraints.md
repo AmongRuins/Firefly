@@ -3,8 +3,8 @@ title: MySQL约束
 published: 2026-04-11
 description: '关于MySQL约束'
 image: './images/covers/mysql-constraints.png'
-tags: [MySQL,软件测试]
-category: '数据库'
+tags: [软件测试]
+category: 'MySQL数据库'
 draft: false 
 lang: ''
 ---

@@ -3,8 +3,8 @@ title: 测试计划与测试报告编写
 published: 2026-04-02
 description: '关于软件计划跟测试报告的相关概念'
 image: './images/covers/planreport.webp'
-tags: [测试计划,测试报告]
-category: '软件测试'
+tags: [软件测试,测试计划,测试报告]
+category: '功能测试'
 draft: false 
 lang: ''
 ---

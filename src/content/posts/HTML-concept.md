@@ -3,8 +3,8 @@ title: HTML相关描述
 published: 2026-03-21T22:04:40
 description: '页面的描述，web测试中需要理解前端的一些语言'
 image: './images/covers/html.webp'
-tags: [HTML]
-category: 软件测试
+tags: [软件测试,HTML]
+category: 前端
 draft: false 
 lang: ''
 ---

@@ -4,7 +4,7 @@ published: 2026-04-10
 description: '关于MySQL数据库的增删改查语句'
 image: './images/covers/readupdate.png'
 tags: [软件测试]
-category: '数据库'
+category: 'MySQL数据库'
 draft: false 
 lang: ''
 ---

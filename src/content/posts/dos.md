@@ -3,8 +3,8 @@ title: Dos命令及网络体系
 published: 2026-04-03
 description: '常见命令以及网络的一些知识'
 image: './images/covers/dos.webp'
-tags: [Dos命令,网络体系]
-category: '软件测试'
+tags: [软件测试,Dos命令,网络体系]
+category: '功能测试'
 draft: false 
 lang: ''
 ---

@@ -3,8 +3,8 @@ title: 数据库表操作
 published: 2026-04-08
 description: '针对数据库与表的操作，即数据定义语言'
 image: './images/covers/operation.webp'
-tags: [MySQL]
-category: '软件测试'
+tags: [软件测试]
+category: 'MySQL数据库'
 draft: false 
 lang: ''
 ---

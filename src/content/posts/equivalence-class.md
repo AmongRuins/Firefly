@@ -3,8 +3,8 @@ title: 测试用例设计方法之等价类
 published: 2026-03-30
 description: '处理无穷数据时，使用等价类来划分测试用例；在处理取值范围时，可以用边界值进行补充'
 image: './images/covers/equivalence.webp'
-tags: [测试用例,等价类,边界值]
-category: '软件测试'
+tags: [软件测试,测试用例,等价类,边界值]
+category: '功能测试'
 draft: false 
 lang: ''
 ---

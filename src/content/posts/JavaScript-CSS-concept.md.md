@@ -3,8 +3,8 @@ title: JavaScript和CSS相关描述
 published: 2026-03-23
 description: 'HTML用于页面的显示，那么JavaScript则在于页面动作的处理与校验，CSS则用于美化页面'
 image: './images/covers/JavaScript.webp'
-tags: [JavaScript,CSS]
-category: '软件测试'
+tags: [软件测试,JavaScript,CSS]
+category: '前端'
 draft: false 
 lang: ''
 ---

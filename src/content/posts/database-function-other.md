@@ -3,8 +3,8 @@ title: 数据库函数
 published: 2026-04-10
 description: '数据库常用函数'
 image: './images/covers/database-function-other.jpg'
-tags: [MySQL,函数]
-category: '数据库'
+tags: [软件测试,函数]
+category: 'MySQL数据库'
 draft: false 
 lang: ''
 ---

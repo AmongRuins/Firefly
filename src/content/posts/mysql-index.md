@@ -3,8 +3,8 @@ title: MySQL索引
 published: 2026-04-12
 description: '关于MySQL索引的大概解析'
 image: './images/covers/mysqlindex.jpg'
-tags: [MySQL,索引,软件测试]
-category: '数据库'
+tags: [软件测试,索引]
+category: 'MySQL数据库'
 draft: false 
 lang: ''
 ---

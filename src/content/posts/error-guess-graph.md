@@ -3,8 +3,8 @@ title: 测试用例设计方法之因果图判定表法
 published: 2026-04-01
 description: '除了常用的等价类、边界值、场景法、正交实验法外的其余几种方法'
 image: './images/covers/errorguess.webp'
-tags: [错误推断法,因果图,判定表法,测试用例]
-category: '软件测试'
+tags: [软件测试,错误推断法,因果图,判定表法,测试用例]
+category: '功能测试'
 draft: false 
 lang: ''
 ---

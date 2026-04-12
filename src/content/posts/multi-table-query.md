@@ -3,8 +3,8 @@ title: 多表查询
 published: 2026-04-11
 description: '关于MySQL多表查询的相关语句'
 image: './images/covers/multi-table-query.jpg'
-tags: [软件测试,MySQL]
-category: '数据库'
+tags: [软件测试]
+category: 'MySQL数据库'
 draft: false 
 lang: ''
 ---
